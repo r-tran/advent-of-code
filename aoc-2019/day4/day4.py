@@ -1,7 +1,4 @@
 from collections import defaultdict
-nums = map(str, range(123257, 647016))
-
-password_candidates = 0
 
 def check_rules(num):
 	repeat_counts = defaultdict(int)
@@ -13,6 +10,8 @@ def check_rules(num):
 		if i > 0 and num[i] < num[i - 1]:
 			decreases = True
 	return repeat_counts, decreases 
+
+nums = map(str, range(123257, 647016))
 
 # part 1
 num_pw_candidates_part1 = 0
